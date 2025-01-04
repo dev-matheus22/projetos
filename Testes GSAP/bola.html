@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+
+    <title>Document</title>
+    <style>
+        body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background: #f0f0f0;
+}
+
+.ball {
+  width: 50px;
+  height: 50px;
+  background-color: red;
+  border-radius: 50%;
+  position: absolute;
+}
+
+    </style>
+</head>
+<body>
+    <div class="ball"></div>
+
+    <script>
+        // Registrar o efeito personalizado "bola"
+gsap.registerEffect({
+  name: "bola", // Nome do efeito
+  effect: (targets, config) => {
+    return gsap.to(targets, {
+      y: config.y || -200, // Posição vertical
+      duration: config.duration || 1, // Duração do salto
+      ease: "bounce.out", // Efeito de bounce
+      repeat: config.repeat || 0, // Quantidade de repetições
+      yoyo: config.yoyo || false // Volta ao estado inicial
+    });
+  },
+  defaults: { 
+    y: -200, 
+    duration: 1, 
+    repeat: 0, 
+    yoyo: false 
+  }, // Valores padrão
+  extendTimeline: true // Pode ser usado em timelines
+});
+
+gsap.effects.bola(".ball", { y: -300, duration: 3.5, repeat: 2, yoyo: true });
+
+
+
+    </script>
+</body>
+</html>

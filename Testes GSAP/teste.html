@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GSAP Example</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+</head>
+<body>
+    <div id="boxB" style="width: 100px; height: 100px; background: blue; margin-bottom: 50px;color: white;
+    text-align: center; justify-items: center;"> Texto 1</div>
+    <div id="boxR" style="width: 100px; height: 100px; background: red; margin-bottom: 50px;color: white;
+    text-align: center; justify-items: center;">Texto 2</div>
+    <div id="boxY" style="width: 100px; height: 100px; background: yellowgreen; color: white;
+    text-align: center; justify-items: center;">Texto 3</div>
+    <div>
+        <p id="p">Oi</p>
+        <p id="p">Tudo</p>
+        <p id="p">bem</p>
+        <p id="p">com</p>
+        <p id="p">você?</p>
+    </div>
+
+    <script>
+        gsap.to("#boxB", { x: 100, y: 600, duration: 4, scale: 3.5, rotation: 360, ease: "power1.in", repeat: 5, yoyo: true });
+        gsap.to("#boxR", { x: 1200, duration: 10, ease: "expo.in", repeat: 5, yoyo: true  });
+        gsap.to("#boxY", { x: 1200, duration: 10, ease: "steps(8)", y: -200
+         });
+
+         gsap.registerEffect({
+            name: "fade",
+            effect: (targets, config) => {
+                return gsap.to(targets, {duration: config.duration, opacity: config.opacity});
+            },
+            defaults: {duration: 5, scale: 2.5}, 
+
+         });
+
+         gsap.effects.fade("#p")
+
+    </script>
+</body>
+</html>
