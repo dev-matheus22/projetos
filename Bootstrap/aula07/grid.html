@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <title>Document</title>
+    <style>
+        .h100{
+            height: 100px;
+        }
+        .h400{
+            height: 400px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Elementos da coluna:
+     1- container
+        Serve pra envolver o conteúdo da página e definir o layout principal, podendo ser
+        conteiner (largura fixa em cada breakpoint)
+        container-fluid (largura de 100% da tela)  
+     2- row
+        Agrupa as colunas e deve ser sepre usado como o pai direto das colunas
+     3- col
+        Define uma coluna dentro de uma linha(row).
+        Por padrão, colunas tem tamanho iguais e se ajustam ao número de colunas
+     4- gutters (g)
+        Por padrão, as colunas têm espaçamento entre si. Esse espaçamento é chamado de gutters e pode ser ajustado
+     5- Centralizando colunas
+        Pode-se usar a classee offset ou
+        txt-center para alinhar o conteúdo
+        -->
+
+    <div class="conteiner">
+        <div class="row">
+            <div class="col-12 bg-dark bg-opacity-50 h100"></div>
+            <div class="col-12 col-md-3 bg-dark bg-opacity-75 h400">
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Libero, dicta eum cupiditate commodi vitae voluptatibus quo numquam, placeat molestiae repudiandae rem nulla veniam debitis quis, illo beatae eligendi quibusdam odit?</p>
+            </div>
+            <div class="col-12 col-md-9 bg-dark bg-opacity-25 h400"></div>
+            <div class="col-12 bg-dark bg-opacity-50 h100"></div>
+        </div>
+    </div>
+</body>
+</html>

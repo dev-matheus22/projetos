@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <title>Tabelas</title>
+</head>
+<body>
+    <!-- 
+        <table> = É a tag principal que cria a estrutura da tabela e contém todas as outras    
+        <tr> = Define as linhas da tabela e contém as tags <td> ou <th>
+        <th> = Define a celula de cabelhaço e é geralmente usada na primeira linha ou coluna.
+            seu texto é exibido em negrito e ele é centralizado
+        <td> = Define os dados da célula e é usada para o conteúdo que não é o cabelhaço
+        <thead> = Define a seção do cabelhaço da tabela
+        <tbody> = Define a seção do corpo da tabela
+        <tfoot> = Define a seção de rodapé da tabela
+
+        Atributos:
+
+        colspan: faz uma célula ocupar várias colunas
+        rowspan: Faz uma célula ocupar várias linhas
+        border: Adiciona uma borda à tabela (opcional e geralmente estilizado com CSS). 
+    -->
+
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th class="col">#</th>
+                <th class="col">Primeiro</th>
+                <th class="col">Segundo</th>
+                <th class="col">Terceiro</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th scope="row"></th>
+                <td>Mark</td>
+                <td>Otto</td>
+                <td>@mdo</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
