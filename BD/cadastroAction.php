@@ -8,8 +8,12 @@
     die("Connection failed: " . $conexao->connect_error);
     }
 
+    $nome = $_POST['txtNome'];
+    $apelido = $_POST['txtApelido'];
+    $email = $_POST['txtEmail'];
+
     $sql = "INSERT INTO amigos (nome, apelido, email)
-            VALUES ('".$_POST['txtNome']."', '".$_POST['txtApelido']."', '".$_POST['txtEmail']."')";
+            VALUES ('$nome', '$apelido', '$email')";
 
             if ($conexao->query($sql) === TRUE){
                 echo '

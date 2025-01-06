@@ -35,7 +35,7 @@
             </div>
             <!-- Botão Lista -->
             <div class="col-sm-6">
-                <a href="cadastro.php" class="btn btn-success" style="display: block;">
+                <a href="listar.php" class="btn btn-success" style="display: block;">
                     <i class="bi bi-card-list" style="font-size: 10.5em;"></i>
                     <p style="font-size: 2em; color: white;">Listar</p>
                 </a>

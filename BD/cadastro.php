@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,28 +7,29 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
     <title>Cadastro - MySQLi</title>
 </head>
-<body>
-    <a href="index.php">
-    <i class="bi bi-arrow-return-left" style="width: 150px; height: 50px;"></i>
+<body class="bg-success">
+    <a href="index.php" class="text-white" style="margin: 20px; display: inline-block;">
+        <i class="bi bi-arrow-return-left" style="font-size: 24px;"></i> Voltar
     </a>
 
-    <div class="container">
-        <h1 class="">Cadastro amigos</h1>
+    <div class="container bg-white rounded shadow p-4" style="max-width: 600px; margin-top: 50px;">
+        <div class="bg-success text-primary p-3 rounded">
+            <h1 class="text-center">Cadastro de Amigos</h1>
+        </div>
 
-        <form action="cadastroAction.php" class="container form-group">
+        <form action="cadastroAction.php" class="form-group mt-3">
             <label class="text-primary">Código</label>
-            <input name="txtID" class="form-control" disableda>
+            <input name="txtID" class="form-control" disabled>
             <label class="text-primary">Nome</label>
             <input name="txtNome" type="text" class="form-control">
             <label class="text-primary">Apelido</label>
             <input name="txtApelido" class="form-control" type="text">
             <label class="text-primary">Email</label>
             <input name="txtEmail" class="form-control" type="text">
-            <button class="btn btn-primary" name="btnAdicionar">
-    <i class="bi bi-plus-square" style="margin-right: 5px;"></i>
-    Adicionar
-</button>
-
+            <button class="btn btn-primary m-4" name="btnAdicionar">
+                <i class="bi bi-plus-square" style="margin-right: 5px;"></i>
+                Adicionar
+            </button>
         </form>
     </div>
 </body>
