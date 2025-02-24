@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alterando o HTML com insertBefore</title>
+    <script src="js/script.js"></script>
+</head>
+<body>
+    <!-- Alterando o HTML com insertBefore  
+
+    * O insertBefore cria um elemento antes de um outtro elemento
+    * É necessário criar um elemento com JS, isso pode ser feito com createElemet 
+    * O elemento de referência pode ser selecionado com alguns dos métodos que vimos antes -->
+
+    <!-- appendChild
+
+    * Possibilita a adição de um elemento dentro de outro 
+    * Este elemento adicionado será o último elemento do elemento pai -->
+
+    <header>
+        <h1 id="title">Título</h1>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Produtos</a></li>
+                <li><a href="#">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main id="main-container">
+        <div class="product">
+            <h2>Produto 1</h2>
+            <p>Descrição</p>
+        </div>
+        <div class="product">
+            <h2>Produto 2</h2>
+            <p>Descrição</p>
+        </div>
+    </main>
+</body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS flex</title>
+    <style>
+        .item {
+            margin: 5px;
+            padding: 5px;
+            background: #447;
+            text-align: center;
+            font-size: 1em;
+            color: #fff;
+        }
+
+        .itemFlex{
+            display: flex;
+        }
+
+        .container{
+            max-width: 600px;
+            height: 400px;
+            margin: 0 auto;
+            border: 1px solid #000;
+            justify-content: center; 
+            align-items: center;
+        } 
+        .horizontal {
+            flex-direction: row;
+        }
+        .vertical {
+            flex-direction: column;
+        }
+
+        .quebra{
+            flex-wrap: wrap;
+        }
+        .tam1{
+            flex-grow: 1;
+        }
+        .tam2{
+            flex-grow: 2;
+        }
+        .tam3{
+            flex-grow: 3;
+        }
+        body{
+            font-family: arial;
+            color: #000;
+        }
+    </style>
+</head>
+<body>
+    <!-- Display das div é block por padrão.  
+     FLEX-FLOW JUNTA FLEX-DIRECTION E FLEX-WRAP
+     justify-content define o alinhamento da direita pra esquerda
+     align-content não dá espaçamento entre os elementos
+     flex-grow aumenta o espaço do item no container e justify-content não tem efeito nesse caso
+    -->
+
+    <div class="container itemFlex quebra horizontal">
+        <div class="item tam1">Matheus 1</div>
+        <div class="item tam3">Matheus 2</div>
+        <div class="item tam2">Matheus 3</div>
+
+    </div>
+</body>
+</html>

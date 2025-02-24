@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos</title>
+    <script src="js/script.js" defer></script>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- O que são eventos?
+
+    * São ações atreladas aa algum comportamento do usuário 
+    * Por exemplo: click, alguma tecla, movimento da tela e do mouse 
+    * Podemos inserir lógica quando estes eventos ocorrem 
+    * E podemos disparar eventos em certos elementos
+    * Esta técnica é conhecida como event handler -->
+
+    <!-- Como acionar um eventos:
+
+    * Selecione o elemento que vai disparar o eventos
+    * Ative o método addEvetListener
+    * Ele serve pra declarar qual o tipo do evento, 
+    e por meio de callback definimos o qu acontece -->
+
+    <!-- 2 - Removendo eventos 
+
+    * Há situações que vamos querer remover os eventos dos elementos
+    * O método para isso é removeEventListener
+    * Passamos o eventoo que queremos remmover como argumento  -->
+
+    <!-- 3 - O objeto do evento 
+
+    * Todo evento possui um argumento especial, que contém informações do mesmo 
+    * Geralmente é chamado de event ou "e" -->
+
+    <!-- 4 - Propagação
+
+    * Quando um elemento de um evento não é claramente definido pode haver Propagação
+    * Ou seja, um outro elemento ativa o evento
+    * Paara resolver esse problema, temos o método stopPropagation -->
+
+    <!-- 5 - Ações default 
+
+    * Muitos elementos tem ações padrão no html 
+    * Como os links que nos levam ma outtras páginas
+    * Podemos rremover isso com o método preventDefault
+     -->
+
+     <!-- 6 - Eventos de tecla 
+
+     * Os eventos de tecla mapeiam as ações no teclado 
+     * Temos a disposição keyup e keydown 
+     * keyup ativa quando a tecla solta 
+     * keydown ativa quando é pressionada -->
+
+     <!-- 7 - Outros eventos de mouse 
+
+     * mousedown: pressionou botão do mouse 
+     * mouseup: soltou o botão do mouse 
+     * dblclick: click duplo -->
+
+      <!-- 8 - Movimento do mouse 
+
+      * é possível ativar um evento a partir da movimentação do mouse 
+      * o evento é o mouemovee
+      * com o objeto do evento, podemos detectar a posição do pointer do mouse  -->
+
+      <!-- 9 - Eventos por scroll 
+
+      * Podemos também adicionar um evento ao scroll do mouse/página 
+      * Isso é feito pelo evento scroll 
+      * Podemos determinar que algo aconteça após chegar numa posição escolhida da tela  -->
+
+      <!-- 10 - Eventos por foco 
+
+      * O event focus é disparado quando focamos em um elemento 
+      * Já o blur é quando perde o foco do elemento 
+      * Estes são comuns em inputs -->
+
+      <!-- 11 - eventos de carregamento de página
+
+    * Podemos adicionar um evento ao carregar a página que é o load
+    * E quando o usuário sai da página, que é o beforeunload -->
+
+        <!-- 12 - técnica de debounce
+
+        * O debounce é uma técnica utilizada para fazer um 
+        evento disparar menos vezes
+        * Isso poupa memória do usuário, pois talvez
+        nem sempre o evento seja necessário -->
+    
+
+
+
+    <h1 id="my-title">Eventos</h1>
+    <button id="my-button">Clica em mim</button>
+
+    <h2>Removendo eventos</h2> 
+    <button id="btn">Tem evento</button>
+    <button id="btn2">Removendo o evento</button>
+
+    <div id="btn-container">
+        <button id="div-btn">Propagação</button>
+    </div>
+    <a href="www.google.com">Ir para o google</a>
+
+    <h4 id="eventos-mouse">Outros eventos de mouse</h4>
+
+    <h4>Evento de focus</h4>
+    <input type="text" id="my-input" placeholder="Testando...">
+</body>
+</html>
